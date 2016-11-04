@@ -1,0 +1,38 @@
+<html>
+<head>
+</head>
+<body onload="tb();" >
+<script type="text/javascript">
+
+	function tb(){ // function to create a table
+		document.write("<table border-collapse='collapse' ");
+		for (var i=0; i<100; i++){
+			document.write("<tr>");
+			for(var j=0; j<100; j++){
+				document.write("<td width=10 height=10 bgcolor='white' onmouseover='cambiacolor_over(this)' onclick='borracolor(this)'></td>");
+			}
+			document.write("</tr>");
+		}
+		document.write("</table><button onclick='borracanvas(this)'>borrar canvas</button>");
+	}
+	function cambiacolor_over(celda){  //function to change the color if press ctrl or shift
+		if (event.ctrlKey){
+			celda.style.backgroundColor="red"; } 
+		else if (event.shiftKey){
+			celda.style.backgroundColor="blue"; }
+	}
+	
+	function borracolor(celda){ // function to erase colors with the mouse click
+		celda.style.backgroundColor="white";
+	}
+	
+	function borracanvas(celda){ // function to clear the canvas
+		//document.getElementsByTagName("td").style.backgroundColor="white";
+		celda.style.backgroundColor="white";
+	}
+	
+	
+</script>
+
+</body>
+</html>
