@@ -1,0 +1,16 @@
+<html>
+<head></head>
+<body onMouseMove="funccoor(event);">
+<p align="left">x: <p id="x"></p></p>
+<p align="left">y: </p><p id="y"></p>
+<p id="h"></p>
+<script type="text/javascript">
+	function funccoor(event){
+		var corx = event.screenX;
+		var cory = event.screenY;
+		document.getElementById("x").innerHTML = corx ;
+		document.getElementById("y").innerHTML = cory ;
+	}
+</script>
+</body>
+</html>
