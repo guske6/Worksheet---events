@@ -13,7 +13,7 @@
 			}
 			document.write("</tr>");
 		}
-		document.write("</table><button onclick='borracanvas(this)'>borrar canvas</button>");
+		document.write("</table><button onclick='borracanvas()'>borrar canvas</button>");
 	}
 	function cambiacolor_over(celda){  //function to change the color if press ctrl or shift
 		if (event.ctrlKey){
@@ -27,8 +27,8 @@
 	}
 	
 	function borracanvas(celda){ // function to clear the canvas
-		//document.getElementsByTagName("td").style.backgroundColor="white";
-		celda.style.backgroundColor="white";
+		for (i=0; i<10000; i++)
+		document.getElementsByTagName("td")[i].style.backgroundColor="white";
 	}
 	
 	
